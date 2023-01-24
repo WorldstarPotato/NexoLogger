@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexoLogger.App", "NexoLogger.App\NexoLogger.App.csproj", "{4F1B71FC-6B14-4522-BDCE-BFA17B9D13F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexoLogger.Lib", "NexoLogger.Lib\NexoLogger.Lib.csproj", "{B5915377-A2CC-4A0B-806A-6E67D1659430}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4F1B71FC-6B14-4522-BDCE-BFA17B9D13F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F1B71FC-6B14-4522-BDCE-BFA17B9D13F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F1B71FC-6B14-4522-BDCE-BFA17B9D13F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5915377-A2CC-4A0B-806A-6E67D1659430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5915377-A2CC-4A0B-806A-6E67D1659430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5915377-A2CC-4A0B-806A-6E67D1659430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5915377-A2CC-4A0B-806A-6E67D1659430}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
