@@ -9,7 +9,7 @@
 
         protected string GetFormattedMessage(string message, LogLevel logLevel, DateTime logTime)
         {
-            return $"#{logTime:yyyy-MM-dd HH:mm:ss.fff} [#{logLevel}] #{message}";
+            return $"{logTime:yyyy-MM-dd HH:mm:ss.fff} {"[" + logLevel + "]",-8} {message}";
         }
 
         public void LogDebug(string message)
