@@ -24,9 +24,6 @@
         }
         protected override void Log(string message, LogLevel logLevel)
         {
-            if (message == null)
-                throw new ArgumentException("The message cannot be null.", nameof(message));
-
             var formattedMessage = GetFormattedMessage(message, logLevel);
             if (formattedMessage.Length > _maxFileSizeInBytes)
                 formattedMessage = formattedMessage.Substring(0, _maxFileSizeInBytes);

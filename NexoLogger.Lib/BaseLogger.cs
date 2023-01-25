@@ -14,17 +14,25 @@
 
         public void LogDebug(string message)
         {
-            Log(message, LogLevel.Debug);
+            LogWithCheck(message, LogLevel.Debug);
         }
 
         public void LogError(string message)
         {
-            Log(message, LogLevel.Error);
+            LogWithCheck(message, LogLevel.Error);
         }
 
         public void LogInfo(string message)
         {
-            Log(message, LogLevel.Info);
+            LogWithCheck(message, LogLevel.Info);
+        }
+
+        private void LogWithCheck(string message, LogLevel logLevel) 
+        {
+            if (message == null)
+                throw new ArgumentException("The message cannot be null.", nameof(message));
+
+            Log(message, logLevel);
         }
 
         protected abstract void Log(string message, LogLevel logLevel);
