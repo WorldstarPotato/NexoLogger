@@ -28,17 +28,18 @@ for (int i = 1; i <= 30; i++)
 }
 
 string fileName = @"StreamLogFile.txt";
-using (var stream = new FileStream(fileName, FileMode.OpenOrCreate))
+var stream = new FileStream(fileName, FileMode.OpenOrCreate);
+
+logger = new StreamLogger(stream);
+
+logger.LogDebug("This is a debug message.");
+logger.LogInfo("This is an info message.");
+logger.LogError("This is an error message.");
+
+for (int i = 1; i <= 10; i++)
 {
-    logger = new StreamLogger(stream);
-
-    logger.LogDebug("This is a debug message.");
-    logger.LogInfo("This is an info message.");
-    logger.LogError("This is an error message.");
-
-    for (int i = 1; i <= 10; i++)
-    {
-        var message = $"#{i}:" + String.Concat(Enumerable.Repeat("a", 1000));
-        logger.LogInfo(message);
-    }
+    var message = $"#{i}:" + String.Concat(Enumerable.Repeat("a", 1000));
+    logger.LogInfo(message);
 }
+
+Console.ReadLine();
